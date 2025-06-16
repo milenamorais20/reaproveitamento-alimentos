@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    # Onde esta destacado NOME_DO_BANCO e onde voce devera substituir pelo nome do seu banco de dados
+    url: jdbc:postgresql://localhost:5432/reaproveitamento_alimentos?useTimezone=true&serverTimezone=UTC&useLegacyDate #jdbc:postgresql://localhost:5432/NOME_DO_BANCO: parte de conexao com o bd, e o restante e referentes a possiveis erro de timezone. Nao preciso decorar essa parte, so repetir para todos projetos
+    username: milena
+    password: 220401
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update # O hibernate vai ficar 'vigiando' o c?digo para ver ser alguma altera??o foi feita, se sim, ele vai dar um update
+    properties:
+      hibernate.format_sql: true # O hibernate vai mostrar no terminal as tabelas na estrutura sql
+  tasks:
+    scheduling:
+      cron: 0 0 8 ? * MON-FRI
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: milenamoraistech@gmail.com
+    password: vdqy mtey hhqm tclr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    default-encoding: UTF-8
+    test-connection: false
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
