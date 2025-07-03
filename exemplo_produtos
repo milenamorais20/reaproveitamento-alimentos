@@ -1,0 +1,72 @@
+[
+{
+  "nome": "Feijão",
+  "dataValidade": "2025-06-30",
+  "quantidadeEmKilos": 10
+},
+{
+  "nome": "Arroz",
+  "dataValidade": "2025-06-29",
+  "quantidadeEmKilos": 20
+},
+{
+  "nome": "Macarrão",
+  "dataValidade": "2025-06-28",
+  "quantidadeEmKilos": 10
+},
+{
+  "nome": "Pão de forma",
+  "dataValidade": "2025-06-27",
+  "quantidadeEmKilos": 5
+},
+{
+  "nome": "Açúcar cristal",
+  "dataValidade": "2025-06-26",
+  "quantidadeEmKilos": 30
+},
+{
+  "nome": "Atum em lata",
+  "dataValidade": "2025-06-25",
+  "quantidadeEmKilos": 5
+},
+{
+  "nome": "Peito de Frango",
+  "dataValidade": "2025-06-24",
+  "quantidadeEmKilos": 50
+},
+{
+  "nome": "Queijo Mussarela",
+  "dataValidade": "2025-06-23",
+  "quantidadeEmKilos": 15
+},
+{
+  "nome": "Creme de Leite",
+  "dataValidade": "2025-06-22",
+  "quantidadeEmKilos": 5
+},
+{
+  "nome": "Quinoa",
+  "dataValidade": "2025-06-21",
+  "quantidadeEmKilos": 10
+},
+{
+  "nome": "Grão-de-bico",
+  "dataValidade": "2025-06-20",
+  "quantidadeEmKilos": 10
+},
+{
+  "nome": "Macarrão",
+  "dataValidade": "2025-06-15",
+  "quantidadeEmKilos": 40
+},
+{
+  "nome": "Sardinha enlatada",
+  "dataValidade": "2025-06-10",
+  "quantidadeEmKilos": 10
+},
+{
+  "nome": "Amendoim torrado",
+  "dataValidade": "2025-06-11",
+  "quantidadeEmKilos": 5
+}
+]

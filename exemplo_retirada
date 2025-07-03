@@ -1,0 +1,30 @@
+RETIRADA
+{
+  "usuarioId": 1,
+  "produtoId": [
+    1,2,3
+  ],
+  "quantidadeRetirada": [
+    10,5,50
+  ]
+}
+
+{
+  "usuarioId": 2,
+  "produtoId": [
+    4,5,6
+  ],
+  "quantidadeRetirada": [
+    15,5,10
+  ]
+}
+
+{
+  "usuarioId": 3,
+  "produtoId": [
+    7,8,9
+  ],
+  "quantidadeRetirada": [
+    40,10,5
+  ]
+}

@@ -6,10 +6,10 @@ import sistema.reaproveitamento.alimentos.project.model.dto.ProdutoDTO;
 import java.util.List;
 
 public interface ProdutoService {
-    void create(ProdutoDTO produtoDTO);
-    void update(int id, ProdutoDTO produtoDTO);
-    Produto get(int id);
-    List<Produto> getAll();
-    void delete(int id);
-    void deleteAll();
+    List<Produto> createManyProdutos(List<Produto> listaProdutos);
+    void updateProduto(int id, ProdutoDTO produtoDTO);
+    Produto getProduto(int id);
+    List<Produto> getAllProdutos();
+    void deleteProduto(int id);
+    void deleteAllProdutos();
 }

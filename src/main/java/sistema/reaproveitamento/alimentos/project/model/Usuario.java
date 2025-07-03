@@ -1,24 +1,30 @@
 package sistema.reaproveitamento.alimentos.project.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
-@Table(name = "tb_ong")
+@Table(name = "tb_usuario")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Ong {
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
 
-    @NotNull
     private String nome;
 
-    @NotNull
+    @Column(unique = true)
     private String email;
+
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE , fetch = FetchType.LAZY)
+    @JsonIgnore
+    private List<Retirada> retiradas = new ArrayList<>();
 }

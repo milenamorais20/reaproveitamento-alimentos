@@ -1,13 +1,12 @@
 package sistema.reaproveitamento.alimentos.project.scheduler;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import sistema.reaproveitamento.alimentos.project.mail.Mail;
-import sistema.reaproveitamento.alimentos.project.model.Ong;
+import sistema.reaproveitamento.alimentos.project.model.Usuario;
 import sistema.reaproveitamento.alimentos.project.model.Produto;
-import sistema.reaproveitamento.alimentos.project.repository.OngRepository;
+import sistema.reaproveitamento.alimentos.project.repository.UsuarioRepository;
 import sistema.reaproveitamento.alimentos.project.repository.ProdutoRepository;
 
 import java.time.LocalDate;
@@ -19,16 +18,16 @@ public class NotificacaoScheduler {
     private ProdutoRepository produtoRepository;
 
     @Autowired
-    private OngRepository ongRepository;
+    private UsuarioRepository usuarioRepository;
 
     @Autowired
     private Mail mail;
 
-    @Scheduled(cron = "0 28 18 * * ?")
+    @Scheduled(cron = "0 0 8 * * ?")
     public void notificacaoProdutosProximoDoVencimento(){
         LocalDate hoje = LocalDate.now();
 
-        List<Ong> listEmail = ongRepository.findAllByEmailIsNotNull();
+        List<Usuario> listEmail = usuarioRepository.findAllByEmailIsNotNull();
         List<Produto> produtos = produtoRepository.findByDataValidadeBetween(hoje,hoje.plusDays(10));
 
         StringBuilder listaProdutos = new StringBuilder();
@@ -40,9 +39,9 @@ public class NotificacaoScheduler {
                         .append("\n");
         }
 
-        for (Ong ong : listEmail){
-            String corpEmail = "Olá "+ ong.getNome()+ "! Gostaríamos de informar que temos a lista de produtos abaixo que vencem dentro dos próximos 10 dias:" + listaProdutos.toString();
-            mail.enviarEmail("milenamoraistech@gmail.com", ong.getEmail(),"Produto próximo do vencimento",corpEmail);
+        for (Usuario usuario : listEmail){
+            String corpEmail = "Olá "+ usuario.getNome()+ "! Gostaríamos de informar que temos a lista de produtos abaixo que vencem dentro dos próximos 10 dias:" + listaProdutos.toString();
+            mail.enviarEmail("milenamoraistech@gmail.com", usuario.getEmail(),"Produto próximo do vencimento",corpEmail);
         }
 
     }

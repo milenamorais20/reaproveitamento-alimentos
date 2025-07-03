@@ -1,13 +1,13 @@
 spring:
   datasource:
     # Onde esta destacado NOME_DO_BANCO e onde voce devera substituir pelo nome do seu banco de dados
-    url: jdbc:postgresql://localhost:5432/reaproveitamento_alimentos?useTimezone=true&serverTimezone=UTC&useLegacyDate #jdbc:postgresql://localhost:5432/NOME_DO_BANCO: parte de conexao com o bd, e o restante e referentes a possiveis erro de timezone. Nao preciso decorar essa parte, so repetir para todos projetos
-    username: milena
-    password: 220401
+    url: #jdbc:postgresql://localhost:5432/NOME_DO_BANCO: parte de conexao com o bd, e o restante e referentes a possiveis erro de timezone. Nao preciso decorar essa parte, so repetir para todos projetos
+    username: #username do sue bd
+    password: #senha do seu bd
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update # O hibernate vai ficar 'vigiando' o c?digo para ver ser alguma altera??o foi feita, se sim, ele vai dar um update
+      ddl-auto: update
     properties:
       hibernate.format_sql: true # O hibernate vai mostrar no terminal as tabelas na estrutura sql
   tasks:
@@ -16,8 +16,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: milenamoraistech@gmail.com
-    password: vdqy mtey hhqm tclr
+    username: #seu email
+    password: # sua senha criptografada (de preferencia)
     properties:
       mail:
         smtp:

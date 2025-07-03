@@ -5,13 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OngDTO {
+@Data
+public class ItemRetiradaDTO {
     @NotNull
-    private String nome;
-
+    private Integer produtoId;
     @NotNull
-    private String email;
+    private Double quantidadeRetirada;
 }
